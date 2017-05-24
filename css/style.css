@@ -1,0 +1,71 @@
+
+    #rank{
+        border-radius: 10px !important;
+        border: 1px solid black !important;
+
+    }
+	 #todo {
+	text-transform: uppercase;
+	}
+
+	 .letra {
+	 	width: 25px;
+	 	height: 25px;
+	 	line-height: 25px;
+	 	text-align: center;
+	 	position: absolute;
+	 	font-family: Arial, Helvetica, sans-serif;
+	 	font-size: 11px;
+	 	border: 1px solid black;
+	 	cursor: pointer;
+	 	background-color: #FFFFFF;
+	 	margin: -1px 0px 0px -1px;
+	 }
+	 .highlight {
+	 	background-color: #FFCC00;
+	 }
+	 
+	 .found {
+	 	background-color: #33CC33;
+	 }
+	.sublinhado{
+	text-decoration: line-through;
+	}
+	 .canvas {
+	 	position: relative;
+	 	border: 1px solid black;
+	 	margin: auto;
+        width: 100%;
+	 	height: 100%;
+	 } 
+	 .box {
+	 	width: 25px;
+	 	height: 23px;
+	 	position: absolute;
+	 	border: 2px solid #FF0000;
+	 	-moz-border-radius: 15px;
+	 	-webkit-border-radius: 15px;
+	 	border-radius: 15px;
+	 }
+	 .lateral{
+	 	float: left;
+	 	position: absolute;
+	 	margin-left: 20px;
+	 	background-color: #eeeeee;
+	 }
+    #menu{
+        color:blue;
+        font-weight: bold;
+    }
+
+.borda_rank{
+    border:1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    }
+    #rank{
+        color: #FF0000;
+        font-size: 115%;
+        font-family: Arial;
+        font-weight: bold;
+    }
