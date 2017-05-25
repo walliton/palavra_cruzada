@@ -3,7 +3,7 @@ include('config.php');
 header('Content-Type: text/html; charset=utf-8');
 setlocale(LC_CTYPE,'pt_BR');
 
-$login = $_POST['campo1'];
+$login = addslashes($_POST['campo1']);
 $senha = $_POST['campo2'];
 
 $testar = mysql_query("SELECT * FROM `login`  WHERE `usuario` = '$login'");

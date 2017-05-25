@@ -1,6 +1,5 @@
 var cont = 0;
 var paracont = 0;
-var itensList = [];
 
 (function($) {
 	
@@ -187,21 +186,17 @@ var itensList = [];
 		if(elementEnd.length > 0){
 			if( (idx = words.indexOf(selectedWord)) > -1 || (idx = words.indexOf(reversed)) > -1){
 				for(var y= 0; y<=words.length;y++){
-					if(words[y]==selectedWord){
-						$("#"+y).addClass("found");
-						
-						if((idx = itensList.indexOf(y)) == -1){
-						cont++;
-				}
-						itensList[y] = y;
+					if((words[y]==selectedWord) || (words[y]==reversed)){
+						$("#"+y).addClass(opt.foundClass);
+                        words.splice(idx, 1);					
 					}
 				
-			}
+			     }
 
 			
 				$('.' + opt.highlightClass).addClass(opt.foundClass);
 				$(canvas).trigger('right');
-				if(cont == words.length){
+				if(words.length == 0){
 					$.post( "insere_rank.php", { usuario: user_logado, tempo: totaltem, nivel: nivel_logado});
 					alert('Parabens '+user_logado+' \nSeu tempo foi '+totaltem+'\nNo nível '+nivel_logado);
 					paracont = 1;
@@ -215,6 +210,7 @@ var itensList = [];
 		
 		$('.'+opt.highlightClass).removeClass(opt.highlightClass);
 		elementEnd = elementStart = null;
+
 	}
 	
 	//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/

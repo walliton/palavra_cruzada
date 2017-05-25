@@ -1,5 +1,5 @@
-﻿<?PHP 
-$conexao = mysql_connect ("trabalhoonline.sytes.net" , "walliton", "wa9801") 
+<?PHP 
+$conexao = mysql_connect ("localhost" , "walliton", "wa9801") 
      or die ("Conexão falhou!");
 mysql_select_db ("caca_palavras") 
      or die ("base de dados não existe");

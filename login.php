@@ -1,7 +1,7 @@
 <?PHP 
 include('config.php');
 setlocale(LC_CTYPE,'pt_BR');
-$login_db = $_POST['campo1'];
+$login_db = addslashes($_POST['campo1']);
 $senha_db = $_POST['campo2'];
 
 		
